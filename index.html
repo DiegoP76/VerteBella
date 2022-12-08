@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<link rel ="globo icon"   href="images/icons8-mariposa.gif" type="image/icon">-->
+
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="normalize.css" />
+
+    <script
+      src="https://kit.fontawesome.com/eb496ab1a0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Carta DonGenta</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--  CREAR NUEVO ENLACE DE Google Analytics E INSERTAR AQUÍ
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-243311167-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-243311167-1');
+        </script>
+        -->
+  </head>
+
+  <body>
+    <header class="hero__container">
+      <!------ Encabezado - Imagen de portada -------->
+
+      <div class="fondo__wood">
+        <img class="wood" id="wood1" src="img/fondo.jpg" alt="VerteBella" />
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- en script: hace q aparezca y desaparezca Caja de Imagen en grande------------  -->
+
+      <div class="ful-img" id="fulImgBox">
+        <img src="img/1depi.jpg" id="fulImg" alt="" />
+        <span onclick="closeImg()">X</span>
+      </div>
+
+      <!-- -------------------------------------------------------------------- -->
+
+      <!--------- MENU DE NAVEGACIÓN ------------>
+
+      <section class="container-menu">
+        <div class="menu__resto" id="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="textPromos" onclick="Mostrar(`promos`)"
+                >PROMOS!</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="Mostrar(`pastas`)">Depilación</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="Mostrar(`polleria`)">Facial</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="Mostrar(`rebozados`)">Pestañas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="Mostrar(`mariscos`)">Definitiva</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="Mostrar(`otros`)">Manicura</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- *************************************************************************** -->
+
+      <!-------- LISTA DE PRODUCTOS --------->
+
+      <section class="items">
+        <!-- en ésta sección van todos los Items -->
+
+        <div id="div_mostrarPromos">
+          <div class="title__items" id="id_promos"><b>PROMOS!</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/promos/1depi.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Depilación</h4>
+              <p>Sesiones de 30 min.</p>
+              <h3>$1500</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/promos/2facial.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Tratamiento Facial</h4>
+              <p>Sesión de 20 min.</p>
+              <h3>$1800</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/promos/3pestanas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>
+                Tinte y Permanente de Pestañas
+              </h4>
+              <p>Sesión de 45 min.</p>
+              <h3>$2800</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/promos/4depdef.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Depilación Definitiva</h4>
+              <p>6 sesiones de 25 min.</p>
+              <h3>$1750 c/u</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/promos/5manicura.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Manicuría</h4>
+              <p>Sesión de 45 min.</p>
+              <h3>$2600</h3>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- ********************************************************************* 
+        
+        <div id="div_mostrarPastas">
+          <div class="title__items" id="cafes"><b>Sorrentinos</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/sorrCalabaza.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino de Calabaza</h4>
+              <p>Calabaza, semillas de girasol, muzza y verdeo.</p>
+              <h3>$600</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/SorrentinosParisienne.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino Parisienne</h4>
+              <p>Hongos, pollo y jamón.</p>
+              <h3>$570</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/SorJamQue.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino de Jamón y Queso</h4>
+              <p>Masa al huevo, relleno de jamón y mozzarella.</p>
+              <h3>$560</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/SorMatembre.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino de Matambre</h4>
+              <p>Matambre, cebolla y tomate.</p>
+              <h3>$600</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/SorrentinosVegetarianos.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino Vegetariano</h4>
+              <p>Verduras de estación y mozzarella.</p>
+              <h3>$540</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/Sorrentinos4Quesos.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino 4 Quesos</h4>
+              <p>Queso azul, holanda, mozzarella y sardo.</p>
+              <h3>$590</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/SorrentinosCapresse.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino Capresse</h4>
+              <p>
+                Mozzarella, tomate confitado, albahaca fresca y aceituna negra.
+              </p>
+              <h3>$590</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/sorCordero2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino de Cordero</h4>
+              <p>
+                Pimiento y cebolla caramelizada, vino blanco, romero y cordero.
+              </p>
+              <h3>$600</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/sorrAtun.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Sorrentino de Atún</h4>
+              <p>Atún, cebolla caramelizada y muzzarella.</p>
+              <h3>$500</h3>
+            </div>
+          </div>
+
+          -->
+
+
+
+          <!-- ----------------------------- 
+
+          <div class="title__items" id="desayunos"><b>Ravioles</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/RaviolesPollo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Ravioles de Pollo</h4>
+              <p>Pollo, jamón y verdeo.</p>
+              <h3>$370</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/ravCarVer.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Ravioles de Carne y Verdura</h4>
+              <p>Carne y verdura.</p>
+              <h3>$370</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/RaviolesRicJam2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Ravioles de Ricota y Jamón</h4>
+              <p>Ricota y jamón.</p>
+              <h3>$370</h3>
+            </div>
+          </div>
+
+          -->
+
+
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="fideos"><b>Fideos</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/FideosCinta2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Fideos Cinta</h4>
+              <p></p>
+              <h3>$270</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/FideosSpaghetti2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Fideos Spaguetti</h4>
+              <p></p>
+              <h3>$270</h3>
+            </div>
+          </div>
+
+          -->
+
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="panaderia"><b>Canelones</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/canelones2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Canelones de Carne</h4>
+              <p>Carne y verduras</p>
+              <h3>$800 ($ x docena)</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/canelones2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Canelones de Pollo</h4>
+              <p>Pollo y verdura.</p>
+              <h3>$800 ($ x docena)</h3>
+            </div>
+          </div>
+
+          -->
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="enlace4"><b>Lasagna</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/Lasagna2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Lasagna</h4>
+              <p style="font-size: 13px">
+                Salsa roja, carne, zanahoria, cebolla, jamon, queso, salsa
+                blanca y queso sardo.
+              </p>
+              <h3>$1400 ($ x kg)</h3>
+            </div>
+          </div>
+
+          -->
+
+          <!-- ----------------------------------- -->
+
+          <!-- 
+                    <div class="title__items" id="enlace4"><b>Panzotti</b></div>
+    
+                    <div class="item__content">
+                        <img src="img/panzotisOso.jpg" class="item__foto" onclick="openFulImg(this.src)" alt="">
+                        <div class="items__content">
+                            <h4>Osobucco y Cheddar</h4>
+                            <p style="font-size: 13px;">Cebolla caramelizada, pimientos ahumados, vino, osobucco y cheddar.</p>
+                            <h3>$520</h3>
+                        </div>
+                    </div>
+                    -->
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="enlace5"><b>Ñoquis</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/pastas/noquis2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Ñoquis</h4>
+              <p>Papa y harina.</p>
+              <h3>$270</h3>
+            </div>
+          </div>
+        </div>
+
+        -->
+
+        <!-- ********************************************************************* 
+
+        <div id="div_mostrarPolleria">
+          <div class="title__items" id="cafes"><b>Pollería</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/pollo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Pollo fresco</h4>
+              <p></p>
+              <h3>$600</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/patamuzlo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Pata Muslo con cuarto</h4>
+              <p></p>
+              <h3>$620</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/patamuzlo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Pata Muslo sin cuarto</h4>
+              <p></p>
+              <h3>$770</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/pechugaFileteada.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Bife de Pechuga - Muslo</h4>
+              <p></p>
+              <h3>$980</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/pechugaHueso.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Pechuga con hueso</h4>
+              <p></p>
+              <h3>$900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/alitas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Alitas</h4>
+              <p></p>
+              <h3>$450</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/menudo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Menudo</h4>
+              <p></p>
+              <h3>$150</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/supremas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Supremas</h4>
+              <p></p>
+              <h3>$980</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/arrollado.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Arrolladitos</h4>
+              <p>Queso, jamón, pimiento, ajo y perejil</p>
+              <h3>$1200</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/polleria/hamPollo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Hamburguesas</h4>
+              <p></p>
+              <h3>$870</h3>
+            </div>
+          </div>
+        </div>
+
+          -->
+
+        <!-- ********************************************************************* 
+
+        <div id="div_mostrarRebozados">
+          <div class="title__items" id="cafes"><b>Medallones</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medPolloReb.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Pollo Rebozado</h4>
+              <p></p>
+              <h3>$1200</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medPolloEspReb.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Pollo y Espinaca</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medPolloJamQueReb.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Pollo, Jamón y Queso</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medPollPrim.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Pollo Primavera</h4>
+              <p></p>
+              <h3>$1150</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medMerluza.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Merluza</h4>
+              <p></p>
+              <h3>$900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medMerlPrim.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Merluza Primavera</h4>
+              <p></p>
+              <h3>$1100</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medMerJamQue.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Merluza, Jamón y Queso</h4>
+              <p></p>
+              <h3>$1100</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/medEspQue.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Medallones de Espinaca y Queso</h4>
+              <p></p>
+              <h3>$1100</h3>
+            </div>
+          </div>
+
+
+          -->
+
+
+
+          <!-- ----------------------------- 
+
+          <div class="title__items" id="desayunos"><b>Filet</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/filet2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Filet de Merluza Rebozada</h4>
+              <p></p>
+              <h3>$1900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/filet2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Filet de Merluza a las Finas Hierbas</h4>
+              <p></p>
+              <h3>$1900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/filet2.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Filet de Merluza a la Romana</h4>
+              <p></p>
+              <h3>$1900</h3>
+            </div>
+          </div>
+
+          -->
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="fideos"><b>Patitas</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/patitas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Patitas de Pollo Común</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/patitas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Patitas de Pollo, Jamón y Queso</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/patitas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Patitas de Pollo y Cheddar</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          -->
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="panaderia"><b>Varios</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/nuggPollo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Nugguets de Pollo</h4>
+              <p></p>
+              <h3>$1300</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/bastones.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Bastones de Muzzarella Rebozada</h4>
+              <p></p>
+              <h3>$2500</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/formitasMerluza.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Formita de Merluza</h4>
+              <p></p>
+              <h3>$900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/rabas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Rabas</h4>
+              <p></p>
+              <h3>$3500</h3>
+            </div>
+          </div>
+
+          -->
+
+          <!-- ----------------------------------- 
+
+          <div class="title__items" id="enlace4"><b>Papas</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/papas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Papa Tradicional</h4>
+              <p></p>
+              <h3>$900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/papas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Papas Noisette</h4>
+              <p></p>
+              <h3>$1900</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/rebozados/papas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Papas Smile</h4>
+              <p></p>
+              <h3>$1900</h3>
+            </div>
+          </div>
+        </div>
+
+        -->
+
+        <!-- 
+
+        <div id="div_mostrarMariscos">
+          <div class="title__items" id="cafes"><b>Mariscos</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/mariscos/rabas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Rabas</h4>
+              <p></p>
+              <h3>$3500</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/mariscos/kani.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Kani Kama</h4>
+              <p></p>
+              <h3>$2500</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/mariscos/cazuela.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Cazuela de Mariscos</h4>
+              <p>contenido: 500gr.</p>
+              <h3>$1200</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/mariscos/langostino.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Langostinos Enteros</h4>
+              <p></p>
+              <h3>$2800</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/mariscos/mejillones.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Mejillones Pelados</h4>
+              <p></p>
+              <h3>$2500</h3>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div id="div_mostrarOtros">
+          <div class="title__items" id="cafes"><b>Salsas</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/salsaFil.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Salsa Filetto</h4>
+              <p></p>
+              <h3>$170</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/salsaBoll.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Salsa Bolognesa</h4>
+              <p></p>
+              <h3>$230</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/salsaJamVer.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Salsa de Jamón y Verdeo</h4>
+              <p></p>
+              <h3>$230</h3>
+            </div>
+          </div>
+
+          
+
+
+
+
+          <div class="title__items" id="cafes"><b>Quesos</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/quesoHolanda.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Queso Holanda</h4>
+              <p></p>
+              <h3>$2000</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/quesoSardo.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Queso Sardo Rallado</h4>
+              <p>x100 gr.</p>
+              <h3>$150</h3>
+            </div>
+          </div>
+
+          
+
+
+
+          <div class="title__items" id="cafes"><b>Otros</b></div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/rabas.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Rabas</h4>
+              <p></p>
+              <h3>$3500</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/salame.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Salame</h4>
+              <p></p>
+              <h3>$2100</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/pan.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Bollito de Pan</h4>
+              <p></p>
+              <h3>$</h3>
+            </div>
+          </div>
+
+          <div class="item__content">
+            <img
+              src="img/otros/crema.jpg"
+              class="item__foto"
+              onclick="openFulImg(this.src)"
+              alt=""
+            />
+            <div class="items__content">
+              <h4>Crema</h4>
+              <p></p>
+              <h3>$250</h3>
+            </div>
+          </div>
+        </div>
+
+        -->
+
+      </section>
+
+
+
+      <!-- Botón para subir al encabezado -->
+      <section class="up">
+        <a href="#wood1" id="up_fig">
+          <img src="img/up.svg" class="up_img" alt="button up" />
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- Botón flotante de Whatsapp -->
+      <a
+        href="https://api.whatsapp.com/send?phone=5493573445800"
+        class="btn-wsp"
+        target="_blank"
+      >
+        <i class="fa fa-whatsapp icono"></i>
+      </a>
+
+      <!-- Contacto -->
+      <section class="footer__contacto" container>
+        <p class="footer__contacto__text">
+          San José  455 - Villa del Rosario - Córdoba
+        </p>
+        <div class="footer__social">
+          <a
+            href="https://www.instagram.com/vertebellacentroestetico/"
+            target="_blank"
+            class="footer__icons"
+            ><img src="img/insta.svg" class="footer__img"
+          /></a>
+
+          <!-- <a href="https://www.facebook.com/dongentapasta-111936403854316" target="_blank" class="footer__icons"><img src="img/face.svg" class="footer__img"></a>  -->
+          <!-- <a href="https://wa.me/5493574402743?text=Hola,%20me%20interesa%20comprar%20" target="_blank" class="footer__icons"><img src="img/wp.svg" class="footer__img"></a> -->
+        </div>
+      </section>
+
+      <section class="footer__aion">
+        <p class="texto__creado">desarrollado por</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5493513951583"
+          target="_blank"
+          class="link__aion"
+          ><img src="img/LogoTran.png" class="logo__aion"
+        /></a>
+        <p class="texto__copy">&copy copywriting</p>
+      </section>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="up.js"></script>
+  </body>
+</html>
